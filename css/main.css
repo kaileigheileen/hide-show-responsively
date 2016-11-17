@@ -1,3 +1,9 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
 html {
   box-sizing: border-box;
   -moz-text-size-adjust: 100%;
@@ -8,4 +14,47 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+img[src*="iguanodon.jpg"] {
+  display: none;
+}
+
+img[src*="stegosaurus.jpg"] {
+  display: none;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 25em) {
+
+  img {
+    display: inline-block;
+    width: 50%;
+  }
+  img[src*="iguanodon.jpg"] {
+    display: inline-block;
+    float: right;
+  }
+
+  img[src*="stegosaurus.jpg"] {
+    display: inline-block;
+    float: right;
+}
+
+@media only screen and (min-width: 38em) {
+
+  img {
+    display: inline-block;
+    width: 50%;
+}
+
+
+@media only screen and (min-width: 60em) {
+
+
+
 }
